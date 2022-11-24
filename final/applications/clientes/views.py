@@ -11,7 +11,7 @@ from django.views.generic import (  #importamos las vistas basadas en clases
 )
  
 #Creacion de vista inicial
-from .models import Oficina #Importamos el modelo empleado
+from .models import Cliente #Importamos el modelo Cliente
 
 class Inicio(TemplateView):     #Esta vista hereda de TemplateView y solo nos muestra un template
    template_name = "inicio.html" #mostramos el contenido del archivo html llamado inicio.html
