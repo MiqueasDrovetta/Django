@@ -22,7 +22,7 @@ urlpatterns = [
    ),
    path(
     'detalle/<pk>/',
-    views.EmpleadoDetailListView.as_view(),
+    views.EmpleadoDetailView.as_view(),
     name='Detalle del empleado'
    ),
    path(

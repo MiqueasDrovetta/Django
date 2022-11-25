@@ -22,15 +22,15 @@ class Inicio(TemplateView):     #Esta vista hereda de TemplateView y solo nos mu
 class EmpleadoListView(ListView):
     model = Empleado
     template_name = "empleado/lista.html"
-    ordering: 'apellidos'
-    context_object_name: 'empleados'
+    ordering = 'apellidos'
+    context_object_name = 'empleados'
 
 
 class BuscaEmpleadoListView(ListView):
     model = Empleado
     template_name = "empleado/buscar.html"
-    ordering: 'apellidos'
-    context_object_name: 'empleados'
+    ordering= 'apellidos'
+    context_object_name= 'empleados'
 
     def get_queryset(self):
       palabra_clave = self.request.GET.get('kword','')
@@ -39,17 +39,17 @@ class BuscaEmpleadoListView(ListView):
       )
       return lista
 
-class EmpleadoDetailListView(ListView):
+class EmpleadoDetailView(DetailView):
     model = Empleado
     template_name = "empleado/detalle.html"
-    context_object_name: 'detalles'
+    context_object_name= 'detalle'
 
 
 class EmpleadoCreateView(CreateView):
     model = Empleado
     template_name = "empleado/create.html"
-    form_class: EmpleadoForm
-    success_url: reverse_lazy('empleado_app:Lista de empleados')
+    form_class= EmpleadoForm
+    success_url = reverse_lazy('empleado_app:Lista de empleados')
 
     def form_valid(self, form):
         emp = form.save()

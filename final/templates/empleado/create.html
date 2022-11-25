@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
-{% block blockname %}
+{% block content %}
     <h1>Alta de empleado</h1>
     <form method="POST">{%csrf_token%}
-        {{form.aas_p}}
+        {{form.as_p}}
         <input type="submit" value="Alta">
 
     </form>
-{% endblock blockname %}
+{% endblock content %}
     

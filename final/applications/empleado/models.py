@@ -36,4 +36,4 @@ class Empleado(models.Model):
 
     def __str__(self):
         """Unicode representation of Empleado."""
-        return f"{self.puesto}: {self.nombres}, {self.apellidos}"
+        return f"{self.nombres}, {self.apellidos}"

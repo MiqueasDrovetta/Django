@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block blockname %}
+{% block content %}
 
 <ul>
        
@@ -9,8 +9,8 @@
     <li>DNI: {{detalle.dni}}</li>
     <ul>
         
-        {% for puesto in detalle.puesto.all %}
-           <li>{{puesto.nombre}}</li>
+        {% for puest in detalle.puesto.all %}
+           <li>{{puest.nombre}}</li>
             
         {% endfor %}
             
@@ -18,5 +18,5 @@
                 
 </ul>
     
-{% endblock blockname %}
+{% endblock content %}
     
