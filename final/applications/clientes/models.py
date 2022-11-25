@@ -8,6 +8,7 @@ class Cliente(models.Model):
     dni = models.CharField("DNI", max_length=50)
     direccion = models.CharField("Direccion", max_length=50)
     telefono = models.CharField("Telefono", max_length=50)
+    fecha = models.DateField("Fecha de alta")
 
     # TODO: Define fields here
 

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block blockname %}
+
+<ul>
+       
+    <li>Apellidos: {{detalle.apellidos}}</li>
+    <li>Nombres: {{detalle.nombres}}</li>
+    <li>DNI: {{detalle.dni}}</li>
+    <ul>
+        
+        {% for puesto in detalle.puesto.all %}
+           <li>{{puesto.nombre}}</li>
+            
+        {% endfor %}
+            
+    </ul>
+                
+</ul>
+    
+{% endblock blockname %}
+    

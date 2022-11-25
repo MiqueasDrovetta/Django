@@ -6,6 +6,7 @@ class Unidad(models.Model):
 
     # TODO: Define fields here
     unidad = models.CharField("Unidad del Producto", max_length=50)
+    desunidad = models.CharField("Descripcion de la unidad", max_length=50)
 
     class Meta:
         """Meta definition for Unidad."""
@@ -38,6 +39,7 @@ class Categoria(models.Model):
 
     # TODO: Define fields here
     categoria = models.CharField("Categoria del Producto", max_length=50)
+    descategoria = models.CharField("Descripcion de la categoria", max_length=50)
 
     class Meta:
         """Meta definition for Categoria."""
@@ -72,7 +74,7 @@ class Producto(models.Model):
 
     def __str__(self):
         """Unicode representation of Producto."""
-        return f'{self.codigo},{self.nombre}, Precio:{self.precioVenta}'
+        return f'{self.codigo}, {self.nombre[0:9]}, Precio:{self.precioVenta}'
 
 
 

@@ -1,21 +1,21 @@
 from django.db import models
 
 # Create your models here.
-class Habilidad(models.Model):
-    """Model definition for Habilidad."""
+class Puesto(models.Model):
+    """Model definition for Puesto."""
 
     # TODO: Define fields here
-    nombre = models.CharField("Nombre de la habilidad", max_length=50)
+    nombre = models.CharField("Nombre del Puesto", max_length=50)
 
     class Meta:
-        """Meta definition for Habilidad."""
+        """Meta definition for Puesto."""
 
-        verbose_name = 'Habilidad'
-        verbose_name_plural = 'Habilidades'
+        verbose_name = 'Puesto'
+        verbose_name_plural = 'Puestos'
 
     def __str__(self):
-        """Unicode representation of Habilidad."""
-        return f"{self.nombre}"
+        """Unicode representation of Puesto."""
+        return self.nombre
 
 
 class Empleado(models.Model):
@@ -26,7 +26,7 @@ class Empleado(models.Model):
     nombres = models.CharField("Nombres del Empleado", max_length=50)
     apellidos = models.CharField("Apellidos del Empleado", max_length=50)
     dni = models.CharField("DNI", max_length=50)
-    habilidades = models.ManyToManyField(Habilidad)
+    puesto = models.ManyToManyField(Puesto)
  
     class Meta:
         """Meta definition for Empleado."""
@@ -36,4 +36,4 @@ class Empleado(models.Model):
 
     def __str__(self):
         """Unicode representation of Empleado."""
-        return f"{self.nombres}, {self.apellidos}"
+        return f"{self.puesto}: {self.nombres}, {self.apellidos}"

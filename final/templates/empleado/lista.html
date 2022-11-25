@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block blockname %}
+
+<h1>Lista de Empleados</h1>
+
+<ul>
+    
+    {% for empleado in empleados %}
+        <li>{{empleado.apellidos}}, {{empleado.nombres}}</li>
+    {% endfor %}
+        
+</ul>
+    
+{% endblock blockname %}
+    
+

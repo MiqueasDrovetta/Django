@@ -22,5 +22,5 @@ class Venta(models.Model):
 
     def __str__(self):
         """Unicode representation of Venta."""
-        return f"{self.fecha}, {self.empleado}, {self.detalle}, {self.cliente}"
+        return f"{self.fecha}"
 

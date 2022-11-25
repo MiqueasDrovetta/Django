@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block blockname %}
+    <h1>Alta de empleado</h1>
+    <form method="POST">{%csrf_token%}
+        {{form.aas_p}}
+        <input type="submit" value="Alta">
+
+    </form>
+{% endblock blockname %}
+    
