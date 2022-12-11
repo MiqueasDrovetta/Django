@@ -55,6 +55,23 @@ class EmpleadoCreateView(CreateView):
         emp = form.save()
         return super(EmpleadoCreateView, self).form_valid(form)
 
+class EmpleadoUpdateView(UpdateView):
+    model = Empleado
+    template_name = "empleado/update.html"
+    form_class= EmpleadoForm
+    success_url = reverse_lazy('empleado_app:Lista de empleados')
+
+    def form_valid(self, form):
+        emp = form.save()
+        return super(EmpleadoUpdateView, self).form_valid(form)
+
+
+class EmpleadoDeleteView(DeleteView):
+    model = Empleado
+    template_name = "empleado/delete.html"
+    success_url = reverse_lazy('empleado_app:Lista de empleados')
+
+
 
 
    

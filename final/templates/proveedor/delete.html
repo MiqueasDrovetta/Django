@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+    <form method="POST">{%csrf_token%}
+        <div class="shadow p-3 mb-5 bg-body rounded">
+             <h1><strong>¿Desea eliminar este registro?</strong></h1>
+        </div>
+
+        <div class="shadow p-3 mb-5 bg-body rounded">
+             <input type="submit" class="btn btn-info" value="SI">        
+        </div>
+    </form>
+
+{% endblock content %}
+    

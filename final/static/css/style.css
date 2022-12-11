@@ -1,0 +1,9 @@
+body {
+    background-color: bisque;
+}
+
+.listaempleados{
+    display: grid;
+    border: 1px solid black;
+    grid-template-columns: auto auto auto auto;
+}

@@ -30,5 +30,15 @@ urlpatterns = [
     views.EmpleadoCreateView.as_view(),
     name='Alta del empleado'
    ),
+   path(
+    'update/<pk>/',
+    views.EmpleadoUpdateView.as_view(),
+    name='Modificar empleado'
+   ),
+   path(
+    'delete/<pk>/',
+    views.EmpleadoDeleteView.as_view(),
+    name='Eliminar empleado'
+   ),
 ]
 #esto se vincula en el archivo principal de urls (persona)
