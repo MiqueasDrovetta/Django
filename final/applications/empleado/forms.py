@@ -15,7 +15,7 @@ class EmpleadoForm(forms.ModelForm):
             'puesto',
         )
         widgets = {
-            'puesto' : forms.CheckboxSelectMultiple() 
+            'puesto' : forms.Select(),
         }
         
 

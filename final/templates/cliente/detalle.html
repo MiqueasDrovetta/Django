@@ -1,29 +1,30 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="shadow p-3 mb-5 bg-body rounded"><strong>Detalle del empleado</strong></div>
+<div class="shadow p-3 mb-5 bg-body rounded"><strong>Detalle del Cliente</strong></div>
 
 <div class="shadow p-3 mb-5 bg-body rounded">
  
         
         <button type="button" class="btn btn-light"><strong>Apellidos</strong></button>
-        <div class="alert alert-info" role="alert">{{detalle.apellidos}}</div>
+        <div class="alert alert-success" role="alert">{{detalle.apellidos}}</div>
 
         <button type="button" class="btn btn-light"><strong>Nombres</strong></button>
-        <div class="alert alert-info" role="alert">{{detalle.nombres}}</div>
+        <div class="alert alert-success" role="alert">{{detalle.nombres}}</div>
 
         <button type="button" class="btn btn-light"><strong>Nº DNI</strong></button>
-        <div class="alert alert-info" role="alert">{{detalle.dni}}</div>
-
-        <button type="button" class="btn btn-light"><strong>Puesto/s</strong></button>  
-                
-        <div class="alert alert-info" role="alert">    
-            {% for puest in detalle.puesto.all %}        
-                                    
-                    - {{puest.nombre}}
-            
-            {% endfor %} 
-        </div>
+        <div class="alert alert-success" role="alert">{{detalle.dni}}</div>
+       
+        <button type="button" class="btn btn-light"><strong>Direccion</strong></button>
+        <div class="alert alert-success" role="alert">{{detalle.direccion}}</div>
+       
+        <button type="button" class="btn btn-light"><strong>Telefono</strong></button>
+        <div class="alert alert-success" role="alert">{{detalle.telefono}}</div>
+       
+        <button type="button" class="btn btn-light"><strong>Fecha de Alta</strong></button>
+        <div class="alert alert-success" role="alert">{{detalle.fecha}}</div>
+       
+        
     </div>
 
 </div>

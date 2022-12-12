@@ -1,29 +1,33 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="shadow p-3 mb-5 bg-body rounded"><strong>Detalle del empleado</strong></div>
+<div class="shadow p-3 mb-5 bg-body rounded"><strong>Detalle del proveedor</strong></div>
 
 <div class="shadow p-3 mb-5 bg-body rounded">
  
         
-        <button type="button" class="btn btn-light"><strong>Apellidos</strong></button>
-        <div class="alert alert-info" role="alert">{{detalle.apellidos}}</div>
+        <button type="button" class="btn btn-light"><strong>Nombre</strong></button>
+        <div class="alert alert-secondary" role="alert">{{detalle.nombres}}</div>
 
-        <button type="button" class="btn btn-light"><strong>Nombres</strong></button>
-        <div class="alert alert-info" role="alert">{{detalle.nombres}}</div>
+        <button type="button" class="btn btn-light"><strong>Representante</strong></button>
+        <div class="alert alert-secondary" role="alert">{{detalle.representante}}</div>
 
-        <button type="button" class="btn btn-light"><strong>Nº DNI</strong></button>
-        <div class="alert alert-info" role="alert">{{detalle.dni}}</div>
+        <button type="button" class="btn btn-light"><strong>Nº CUIT</strong></button>
+        <div class="alert alert-secondary" role="alert">{{detalle.cuit}}</div>
 
-        <button type="button" class="btn btn-light"><strong>Puesto/s</strong></button>  
-                
-        <div class="alert alert-info" role="alert">    
-            {% for puest in detalle.puesto.all %}        
-                                    
-                    - {{puest.nombre}}
-            
-            {% endfor %} 
-        </div>
+        <button type="button" class="btn btn-light"><strong>Direccion</strong></button>
+        <div class="alert alert-secondary" role="alert">{{detalle.direccion}}</div>
+
+        <button type="button" class="btn btn-light"><strong>Telefono</strong></button>
+        <div class="alert alert-secondary" role="alert">{{detalle.telefono}}</div>
+
+        <button type="button" class="btn btn-light"><strong>EMAIL</strong></button>
+        <div class="alert alert-secondary" role="alert">{{detalle.email}}</div>
+
+        <button type="button" class="btn btn-light"><strong>Fecha de alta</strong></button>
+        <div class="alert alert-secondary" role="alert">{{detalle.fecha}}</div>
+
+
     </div>
 
 </div>

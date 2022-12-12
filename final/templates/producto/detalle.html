@@ -1,29 +1,51 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="shadow p-3 mb-5 bg-body rounded"><strong>Detalle del empleado</strong></div>
+<div class="shadow p-3 mb-5 bg-body rounded"><strong>Detalle del producto</strong></div>
 
 <div class="shadow p-3 mb-5 bg-body rounded">
  
         
-        <button type="button" class="btn btn-light"><strong>Apellidos</strong></button>
-        <div class="alert alert-info" role="alert">{{detalle.apellidos}}</div>
+        <button type="button" class="btn btn-light"><strong>Codigo</strong></button>
+        <div class="alert alert-warning" role="alert">{{detalle.codigo}}</div>
 
-        <button type="button" class="btn btn-light"><strong>Nombres</strong></button>
-        <div class="alert alert-info" role="alert">{{detalle.nombres}}</div>
+        <button type="button" class="btn btn-light"><strong>Nombre</strong></button>
+        <div class="alert alert-warning" role="alert">{{detalle.nombre}}</div>
 
-        <button type="button" class="btn btn-light"><strong>Nº DNI</strong></button>
-        <div class="alert alert-info" role="alert">{{detalle.dni}}</div>
+        <button type="button" class="btn btn-light"><strong>Descripcion</strong></button>
+        <div class="alert alert-warning" role="alert">{{detalle.descripcion}}</div>
 
-        <button type="button" class="btn btn-light"><strong>Puesto/s</strong></button>  
+        <button type="button" class="btn btn-light"><strong>Unidad, Marca y Categoria</strong></button>  
                 
-        <div class="alert alert-info" role="alert">    
-            {% for puest in detalle.puesto.all %}        
+        <div class="alert alert-warning" role="alert">    
+            {% for puest in detalle.unidad.all %}        
                                     
-                    - {{puest.nombre}}
+                {{puest.unidad}}
+            
+            {% endfor %} 
+
+            {% for puest in detalle.marca.all %}        
+                                    
+                - {{puest.marca}}
+            
+            {% endfor %} 
+
+            {% for puest in detalle.categoria.all %}        
+                                    
+                - {{puest.categoria}}
             
             {% endfor %} 
         </div>
+
+        <button type="button" class="btn btn-light"><strong>Precio Venta</strong></button>
+        <div class="alert alert-warning" role="alert">{{detalle.precioVenta}}</div>
+
+        <button type="button" class="btn btn-light"><strong>Precio Compra</strong></button>
+        <div class="alert alert-warning" role="alert">{{detalle.precioCompra}}</div>
+
+        <button type="button" class="btn btn-light"><strong>Stock</strong></button>
+        <div class="alert alert-warning" role="alert">{{detalle.stock}}</div>
+
     </div>
 
 </div>

@@ -2,15 +2,15 @@
 
 {% block content %}
     <form method="get">
-        <input type="text" placeholder="apellidos" id="kword" name="kword">
+        <input type="text" placeholder="nombre" id="kword" name="kword">
         <input type="submit" value="Buscar">
     </form>
 
     <ul>
         
-        {% for empleado in empleados %}
+        {% for nombre in productos %}
 
-           <li>{{empleado.apellidos}}, {{empleado.nombres}}</li>
+           <li>{{producto.nombre}}, {{producto.descripcion}}</li>
             
         {% endfor %}
             

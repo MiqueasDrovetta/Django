@@ -1,9 +1,20 @@
-body {
-    background-color: bisque;
-}
 
 .listaempleados{
     display: grid;
-    border: 1px solid black;
+    border: 10px solid black;
     grid-template-columns: auto auto auto auto;
+}
+
+.listaclientes{
+    display: grid;
+    border: 2px solid black;
+    grid-template-columns: auto auto auto auto;
+
+}
+
+.listaproductos{
+    display: grid;
+    border: 2px solid black;
+    grid-template-columns: auto auto auto auto;
+
 }

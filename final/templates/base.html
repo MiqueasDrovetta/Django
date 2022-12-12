@@ -20,26 +20,35 @@
             
             <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">ERP</a>
+            <a class="navbar-brand" href="../inicial">ERP</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Productos</a>
+                <a class="nav-link active" aria-current="page" href="../listaA">Productos</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">Clientes</a>
+                <a class="nav-link" href="../listaC">Clientes</a>
                 </li>
 
                 <li class="nav-item">
-                <a class="nav-link" href="#">Proveedores</a>
+                <a class="nav-link" href="../listaP">Proveedores</a>
                 </li>
 
                 <li class="nav-item">
-                <a class="nav-link" href = '#' >Empleados</a>
-                </li>
+                <a class="nav-link" href = '../lista' >Empleados</a>
+                </li>   
+
+                <li class="nav-item">
+                    <a class="nav-link" href = '#' >Ventas</a>
+                </li> 
+
+                <li class="nav-item">
+                    <a class="nav-link" href = '#' >Compras</a>
+                </li>           
+
                 <li class="nav-item">
                 <a class="nav-link disabled">Disabled</a>
                 </li>
@@ -51,6 +60,8 @@
             </div>
         </div>
         </nav>
+
+        
     
     {% block content %}
         

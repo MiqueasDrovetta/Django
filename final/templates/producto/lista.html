@@ -4,28 +4,28 @@
 {% block content %}
 
 
-<div class="shadow p-3 mb-5 bg-body rounded"><strong>Lista de empleados</strong></div>
-<a class="btn btn-outline-info" href="{% url 'empleado_app:Alta del empleado'%}">CREAR</a>
+<div class="shadow p-3 mb-5 bg-body rounded"><strong>Lista de productos</strong></div>
+<a class="btn btn-outline-warning" href="{% url 'producto_app:Alta del producto'%}">CREAR</a>
 
 <div class="shadow p-3 mb-5 bg-body rounded">
 
     <div class="listaempleados"> 
    
         
-        <button type="button" class="btn btn-light"><strong>Apellidos</strong></button>
-        <button type="button" class="btn btn-light"><strong>Nombres</strong></button>
-        <button type="button" class="btn btn-light"><strong>Nº DNI</strong></button>
+        <button type="button" class="btn btn-light"><strong>Codigo</strong></button>
+        <button type="button" class="btn btn-light"><strong>Nombre</strong></button>
+        <button type="button" class="btn btn-light"><strong>Stock</strong></button>
         <button type="button" class="btn btn-light"><strong>Acciones</strong></button>
 
-        {% for empleado in empleados %}
-            <div class="alert alert-info" role="alert">{{empleado.apellidos}}</div>
-            <div class="alert alert-info" role="alert">{{empleado.nombres}}</div>
-            <div class="alert alert-info" role="alert">{{empleado.dni}}</div>
+        {% for producto in productos %}
+            <div class="alert alert-warning" role="alert">{{producto.codigo}}</div>
+            <div class="alert alert-warning" role="alert">{{producto.nombre}}</div>
+            <div class="alert alert-warning" role="alert">{{producto.stock}} Unidades</div>
             
-            <div class="alert alert-info" role="alert">                     
-                    <a class="btn btn-outline-info" href="{% url 'empleado_app:Detalle del empleado' empleado.id%}">Ver</a>
-                    <a class="btn btn-outline-info" href="{% url 'empleado_app:Modificar empleado' empleado.id%}">Modificar</a>
-                    <a class="btn btn-outline-info" href="{% url 'empleado_app:Eliminar empleado' empleado.id%}">Eliminar</a>            
+            <div class="alert alert-warning" role="alert">                     
+                    <a class="btn btn-outline-warning" href="{% url 'producto_app:Detalle del producto' producto.id%}">Ver</a>
+                    <a class="btn btn-outline-warning" href="{% url 'producto_app:Modificar producto' producto.id%}">Modificar</a>
+                    <a class="btn btn-outline-warning" href="{% url 'producto_app:Eliminar producto' producto.id%}">Eliminar</a>            
             </div>
         {% endfor %}
     </div>

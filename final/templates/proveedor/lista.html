@@ -4,28 +4,28 @@
 {% block content %}
 
 
-<div class="shadow p-3 mb-5 bg-body rounded"><strong>Lista de empleados</strong></div>
-<a class="btn btn-outline-info" href="{% url 'empleado_app:Alta del empleado'%}">CREAR</a>
+<div class="shadow p-3 mb-5 bg-body rounded"><strong>Lista de Proveedores</strong></div>
+<a class="btn btn-outline-secondary" href="{% url 'Proveedor_app:Alta del Proveedor'%}">CREAR</a>
 
 <div class="shadow p-3 mb-5 bg-body rounded">
 
     <div class="listaempleados"> 
    
         
-        <button type="button" class="btn btn-light"><strong>Apellidos</strong></button>
-        <button type="button" class="btn btn-light"><strong>Nombres</strong></button>
-        <button type="button" class="btn btn-light"><strong>Nº DNI</strong></button>
+        <button type="button" class="btn btn-light"><strong>Nombre</strong></button>
+        <button type="button" class="btn btn-light"><strong>Representante</strong></button>
+        <button type="button" class="btn btn-light"><strong>Telefono</strong></button>
         <button type="button" class="btn btn-light"><strong>Acciones</strong></button>
 
-        {% for empleado in empleados %}
-            <div class="alert alert-info" role="alert">{{empleado.apellidos}}</div>
-            <div class="alert alert-info" role="alert">{{empleado.nombres}}</div>
-            <div class="alert alert-info" role="alert">{{empleado.dni}}</div>
+        {% for Proveedor in Proveedores %}
+            <div class="alert alert-secondary" role="alert">{{Proveedor.nombres}}</div>
+            <div class="alert alert-secondary" role="alert">{{Proveedor.representante}}</div>
+            <div class="alert alert-secondary" role="alert">{{Proveedor.telefono}}</div>
             
-            <div class="alert alert-info" role="alert">                     
-                    <a class="btn btn-outline-info" href="{% url 'empleado_app:Detalle del empleado' empleado.id%}">Ver</a>
-                    <a class="btn btn-outline-info" href="{% url 'empleado_app:Modificar empleado' empleado.id%}">Modificar</a>
-                    <a class="btn btn-outline-info" href="{% url 'empleado_app:Eliminar empleado' empleado.id%}">Eliminar</a>            
+            <div class="alert alert-secondary" role="alert">                     
+                    <a class="btn btn-outline-secondary" href="{% url 'Proveedor_app:Detalle del Proveedor' Proveedor.id%}">Ver</a>
+                    <a class="btn btn-outline-secondary" href="{% url 'Proveedor_app:Modificar Proveedor' Proveedor.id%}">Modificar</a>
+                    <a class="btn btn-outline-secondary" href="{% url 'Proveedor_app:Eliminar Proveedor' Proveedor.id%}">Eliminar</a>            
             </div>
         {% endfor %}
     </div>

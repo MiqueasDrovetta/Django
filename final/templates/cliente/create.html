@@ -2,14 +2,14 @@
 
 {% block content %}
 
-    <div class="shadow p-3 mb-5 bg-body rounded"><strong>Alta de empleado</strong></div>
+    <div class="shadow p-3 mb-5 bg-body rounded"><strong>Alta de cliente</strong></div>
     
     <div class="shadow p-3 mb-5 bg-body rounded">
         <form method="POST">{%csrf_token%}
-            <div class="alert alert-info" role="alert">
+            <div class="alert alert-success" role="alert">
             {{form.as_p}}  
             </div>            
-            <input type="submit" class="btn btn-info" value="Alta">
+            <input type="submit" class="btn btn-success" value="Alta">
         
         </form>
     </div>
